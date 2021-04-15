@@ -43,6 +43,7 @@ echo "Installing from source..."
 sudo make install
 echo "Done"
 echo "Creating symlinks"
+sudo rm /usr/local/bin/R /usr/local/bin/Rscript
 sudo ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/R
 sudo ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript
 echo "Done!"
