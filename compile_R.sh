@@ -73,7 +73,7 @@ echo "Done"
 
 # -- configure and make the R source files
 echo "Switching into R-$VERSION directory..."
-cd "R-$VERSION" || exit
+cd "R-$VERSION" || exit 1
 echo "In $(pwd)!"
 echo "Configuring installation..."
 ./configure \
@@ -100,6 +100,11 @@ echo "Done!"
 
 # -- check if the installation succeeded
 echo "Testing installation was succesful:"
-/opt/R/R-"$VERSION"/bin/R --version
+/opt/R/R-"$VERSION"/bin/R --version || exit 1
 echo "Successful is above returned a version number!"
+
+echo "Cleaning up..."
+rm -r R-*
+echo "Finished cleaning up!"
+
 exit 0
