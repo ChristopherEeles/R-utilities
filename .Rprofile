@@ -3,7 +3,12 @@ local({
     r <- getOption('repos')
     r['CRAN'] <- 'https://utstat.toronto.edu/cran/'
     options(repos=r)
+
+    options(datatable.print.class=TRUE)
 })
+
+# quit immedialtely without saving
+iq <- iquit <- function() q(save='no')
 
 # Short-cut to roxygenise and build and R package
 qinstall <- function(quit=FALSE, ...) {
@@ -23,3 +28,5 @@ rm_all <- function(all=TRUE) {
     source('~/.Rprofile')
 }
 
+# Set environemtal variables
+Sys.setenv(R_BIOC_VERSION=3.14)
