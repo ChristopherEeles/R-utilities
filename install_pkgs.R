@@ -4,7 +4,7 @@
 Sys.setenv(R_BIOC_VERSION=3.14)
 
 if (!require('remotes')) install.packages('remotes')
-if (!require('pak')) remotes::install_github('pak', dependencies=TRUE)
+if (!require('pak')) remotes::install_github('r-lib/pak', dependencies=TRUE)
 
 library(pak)
 
