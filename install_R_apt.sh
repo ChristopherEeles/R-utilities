@@ -18,15 +18,17 @@ sudo add-apt-repository \
 apt_pkgs=(
     # system deps
     'libcurl4-openssl-dev' 'libssl-dev' 'libxml2-dev' 'build-essentials'
-    'libsodium-dev'
+    'libsodium-dev' 'libopenblas-dev'
     # databases
-    'sqlite' 'mysql-server' 'mariabd-server-10.3' 'mariadb-server' 
-    'libmariadbclient-dev'
+    'sqlite' 'mariabd-server-10.3' 'mariadb-server' 
+    'libmariadbclient-dev' 'mysql-server'
     # CLI tools
     'git'  'pigz'  'htop'
     # programming languages
     'r-base'
 )
+
+echo "export LD_LIBRARY_PATH=/usr/lib/openblas-base/" >> ~/.bashrc
 
 # -- Run the installation commands
 for pkg in "${apt_pkgs[@]}"

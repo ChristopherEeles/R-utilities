@@ -6,10 +6,8 @@ Sys.setenv(R_BIOC_VERSION=3.14)
 if (!require('remotes')) install.packages('remotes')
 if (!require('pak')) remotes::install_github('r-lib/pak', dependencies=TRUE)
 
-library(pak)
-
 # Install CRAN, GitHub and BioC packages with pak
-CRAN <- c('data.table', 'jsonlite', 'httr', 'xml2', 'XML', 'ggplot2',
+CRAN <- c('renv', 'data.table', 'jsonlite', 'httr', 'xml2', 'XML', 'ggplot2',
     'ggtext', 'crayon', 'glue', 'RMySQL', 'RMariaDB', 'RSQLite', 'rextendr',
     'renv', 'reticulate', 'caret', 'knitr', 'rmarkdown', 'tinytex',
     'shiny', 'ggvis', 'htmlwidgets', 'plotly', 'xtable', 'foreach', 'parallel',
@@ -23,4 +21,4 @@ BIOC <- c('BiocGenerics', 'MatrixGenerics', 'S4Vectors', 'Biobase',
     'GenomicFeatures', 'biomaRt', 'limma', 'AnnotationDbi', 'annotate',
     'piano', 'lsa')
 
-pkg_install(c(CRAN, GITHUB, BIOC))
+pak::pkg_install(c(CRAN, GITHUB, BIOC))
