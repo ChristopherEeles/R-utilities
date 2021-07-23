@@ -1,8 +1,5 @@
 #!/bin/bash
 
-## Designed for use with Ubuntu 20.04
-## Change 'focal' to 'bionic' on line 15 to build for Ubuntu 18.04
-
 # -- Update and upgrade
 sudo apt-get update -y && sudo apt-get upgrade -y
 
@@ -12,7 +9,7 @@ sudo apt install dirmngr gnupg apt-transport-https ca-certificates \
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys \
     E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository \
-    'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+    'deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/'
 
 # -- This has most R system dependencies
 apt_pkgs=(
