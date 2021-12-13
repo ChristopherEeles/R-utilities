@@ -1,10 +1,10 @@
 #!/bin/R
 
 # Add this to your .Rprofile to permanently set your Bioc version
-Sys.setenv(R_BIOC_VERSION=3.14)
+Sys.setenv(R_BIOC_VERSION=3.15)
 
-if (!require('remotes')) install.packages('remotes')
-if (!require('pak')) remotes::install_github('r-lib/pak', dependencies=TRUE)
+if (!require('pak')) 
+    install.packages("pak", repos = "https://r-lib.github.io/p/pak/devel/")
 
 # Install CRAN, GitHub and BioC packages with pak
 CRAN <- c('renv', 'data.table', 'jsonlite', 'httr', 'xml2', 'XML', 'ggplot2',
