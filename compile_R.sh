@@ -93,9 +93,9 @@ echo "Done"
 
 # -- update the system symlinks to the version just installed
 echo "Creating symlinks"
-sudo rm /usr/local/bin/R /usr/local/bin/Rscript
-sudo ln -s /opt/R/R-"$VERSION"/bin/R /usr/local/bin/R
-sudo ln -s /opt/R/R-"$VERSION"/bin/Rscript /usr/local/bin/Rscript
+sudo rm /usr/bin/R /usr/bin/Rscript
+sudo ln -s /opt/R/R-"$VERSION"/bin/R /usr/bin/R
+sudo ln -s /opt/R/R-"$VERSION"/bin/Rscript /usr/bin/Rscript
 echo "Done!"
 
 # -- check if the installation succeeded
