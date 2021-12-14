@@ -21,6 +21,8 @@ apt_pkgs=(
     'libmariadbclient-dev' 'mysql-server'
     # CLI tools
     'git'  'pigz'  'htop'
+    # Rmarkdown
+    'pandoc'
     # programming languages
     'r-base'
 )
