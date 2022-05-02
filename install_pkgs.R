@@ -1,9 +1,9 @@
 #!/bin/R
 
 # Add this to your .Rprofile to permanently set your Bioc version
-Sys.setenv(R_BIOC_VERSION=3.15)
+Sys.setenv(R_BIOC_VERSION=3.16)
 
-if (!require('pak')) 
+if (!require('pak'))
     install.packages("pak", repos = "https://r-lib.github.io/p/pak/devel/")
 
 # Install CRAN, GitHub and BioC packages with pak
@@ -13,12 +13,13 @@ CRAN <- c('renv', 'data.table', 'jsonlite', 'httr', 'xml2', 'XML', 'ggplot2',
     'shiny', 'ggvis', 'htmlwidgets', 'plotly', 'xtable', 'foreach', 'parallel',
     'future', 'devtools', 'roxygen2', 'testthat', 'drake', 'plumber',
     'checkmate', 'profvis', 'bench', 'survival', 'lattice',
-    'RColorBrewer', 'ggplotify', 'gridExtra', 'qs', 'logger', 'memoise'
+    'RColorBrewer', 'ggplotify', 'gridExtra', 'qs', 'logger', 'memoise',
+    'languageserver'
     )
 GITHUB <- c()
-BIOC <- c('BiocGenerics', 'MatrixGenerics', 'S4Vectors', 'Biobase', 
+BIOC <- c('BiocGenerics', 'MatrixGenerics', 'S4Vectors', 'Biobase',
     'SummarizedExperiment', 'MultiAssayExperiment', 'GenomicRanges',
     'GenomicFeatures', 'biomaRt', 'limma', 'AnnotationDbi', 'annotate',
     'piano', 'lsa')
 
-pak::pkg_install(c(CRAN, GITHUB, BIOC))
+pak::pkg_install(c(CRAN, GITHUB, BIOC), dependencies=TRUE)
