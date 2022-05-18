@@ -44,13 +44,12 @@ done
 ## TODO: Generalize this to work with other installation utilties (brew, yum)
 echo "Installing required dependencies"
 sudo apt -y install \
-    build-essential\
-    libcurl4-gnutls-dev\
-    default-jdk\
-    libxml2-dev\
-    libbz2-dev\
-    libssl-dev\
-    texlive-full\
+    build-essential \
+    libcurl4-gnutls-dev \
+    default-jdk \
+    libxml2-dev \
+    libbz2-dev \
+    texlive-full \
     gfortran \
     g++ \
     libreadline-dev \
@@ -62,7 +61,9 @@ sudo apt -y install \
     libpcre2-dev \
     tk-dev \
     tk-table \
-    tcl-dev
+    tcl-dev \
+    zlib1g-dev
+    #libssl-dev\  # broken in Ubuntu-22.04
 echo "Dependencies installed!"
 
 # -- download the correct R version
