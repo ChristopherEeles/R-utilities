@@ -27,5 +27,11 @@ rm_all <- function(all=TRUE) {
     source('~/.Rprofile')
 }
 
+# Shim for rm to make sure my custom functions aren't deleted
+rm <- function(...) {
+    rm(...)
+    source("~/.Rprofile")
+}
+
 # Set environemtal variables
-Sys.setenv(R_BIOC_VERSION=3.14)
+Sys.setenv(R_BIOC_VERSION=3.16)

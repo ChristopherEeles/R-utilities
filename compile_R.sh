@@ -62,8 +62,8 @@ sudo apt -y install \
     tk-dev \
     tk-table \
     tcl-dev \
-    zlib1g-dev
-    #libssl-dev\  # broken in Ubuntu-22.04
+    zlib1g-dev \
+    libssl-dev
 echo "Dependencies installed!"
 
 # -- download the correct R version
