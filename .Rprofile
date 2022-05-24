@@ -1,6 +1,5 @@
 # Set default CRAN mirror to UofT
 local({
-    options(repos=r)
     options(datatable.print.class=TRUE)
 })
 
@@ -23,12 +22,6 @@ obj_size <- function(x, unit='MiB') format(object.size(x), unit)
 rm_all <- function(all=TRUE) {
     rm(list=ls(all=all))
     source('~/.Rprofile')
-}
-
-# Shim for rm to make sure my custom functions aren't deleted
-rm <- function(...) {
-    rm(...)
-    source("~/.Rprofile")
 }
 
 # Set environemtal variables
