@@ -1,7 +1,5 @@
 # Set default CRAN mirror to UofT
 local({
-    r <- getOption('repos')
-    r['CRAN'] <- 'https://utstat.toronto.edu/cran/'
     options(repos=r)
     options(datatable.print.class=TRUE)
 })

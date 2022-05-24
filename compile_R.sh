@@ -17,7 +17,7 @@ while [[ $# -gt 0 ]]; do
             VERSION="$2"
             case $VERSION in
                 devel)
-                    SOURCE='https://stat.ethz.ch/R/daily/R-devel.tar.gz'
+                    SOURCE='https://stat.ethz.ch/R/daily/R-devel.tar.gz'z
                     ;;
                 patched)
                     SOURCE='https://stat.ethz.ch/R/daily/R-patched.tar.gz'

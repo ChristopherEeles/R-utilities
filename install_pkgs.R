@@ -4,7 +4,7 @@
 Sys.setenv(R_BIOC_VERSION=3.16)
 
 if (!require('pak'))
-    install.packages("pak", repos = "https://r-lib.github.io/p/pak/devel/")
+    install.packages("pak")
 
 # Install CRAN, GitHub and BioC packages with pak
 CRAN <- c('renv', 'data.table', 'jsonlite', 'httr', 'xml2', 'XML', 'ggplot2',
